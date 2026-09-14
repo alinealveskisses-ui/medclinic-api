@@ -52,7 +52,7 @@ Docker ativo
 Arquivo .env
 Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 
-```Snippet de código
+```env
 PORT=3000
 DB_HOST=localhost
 DB_PORT=5432
@@ -83,7 +83,7 @@ npm run dev
 ```
 ## Documentação dos Endpoints
 
-# 1. Cadastro de Usuário
+### 1. Cadastro de Usuário
 Cadastra um novo usuário com senha criptografada via bcrypt.
 
 Método / Rota: POST /auth/register
@@ -118,7 +118,7 @@ Respostas de Erro:
 
 409 Conflict: E-mail já cadastrado.
 
-# 2. Login (Autenticação)
+### 2. Login (Autenticação)
 Valida credenciais e retorna o token JWT assinado.
 
 Método / Rota: POST /auth/login
@@ -136,7 +136,7 @@ Resposta Erro:
 
 401 Unauthorized: "Credenciais inválidas."
 
-# 3. Perfil do Usuário Autenticado
+### 3. Perfil do Usuário Autenticado
 Retorna os dados do usuário com base no token fornecido.
 
 Método / Rota: GET /users/me
@@ -159,7 +159,7 @@ Resposta Erro:
 401 Unauthorized: Token ausente, inválido ou expirado.
 
 
-# 4. Verificação de Acesso Restrito (RBAC)
+### 4. Verificação de Acesso Restrito (RBAC)
 Endpoint de teste restrito ao perfil de Administrador.
 
 Método / Rota: GET /users/admin/ping
